@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+  
+.background{
+    position:relative;
+    background-image: url(../images/graphicdesign.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    cursor:pointer;
+    border:2px solid #033a4f;
+}
+.background:hover{
+    background-image: url(../images/DanaBeach.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main{
+   background-color: rgba(255, 255, 255, 0.651);
+}
+.main:hover{
+    background-color:transparent;
+}
+h2{
+    text-align: center;
+    color:hsl(197, 93%, 16%) ;
+    font-size:120%;
+    font-weight: 700;
+    text-shadow:.1em .1em white;
+    transition: color .15s;
+    }
+h2:hover{
+    color:rgb(239, 14, 14);
+}
+
+    /* GLITCH---------------- */
+
+.glitch{
+    
+    position:relative;
+    font-family: san-serif;
+    font-size: 8 rem;
+    font-weight:700;
+    color:teal;
+    text-transform: uppercase;
+    text-shadow: .05em 0em 0 rgba(255, 0, 0, 0.75),
+                 -.025em -.05em 0 rgba(0, 255, 0, 0.75),
+                 .025em .05em 0 rgba(0,0,255,.75);
+    animation:glitch 500 ms infinite;
+}
+.glitch span{
+    position:absolute;
+    top:0;
+    left:0;
+}
+.glitch span:first-child{
+    animation:glitch 650ms infinite;
+    clip-path: polygon(0 0,100% 0,100% 45%,0 45%);
+    transform:translate(-.05em, -.025em); 
+    opacity:.8;
+}
+.glitch span:last-child{
+    animation:glitch 375ms infinite;
+    clip-path: polygon(0 60%,0 100% 60%,100% 100%,0 100%);
+    transform:translate(.125em, .025em);
+    opacity:.8; 
+ }
+
+    
+@keyframes glitch {
+    0%{
+    text-shadow: .05em 0em 0 rgba(255, 0, 0, 0.75),
+                 -.25em -.025em 0 rgba(0, 255, 0, 0.75),
+                 -.025em .05em 0 rgba(0,0,255,.75);
+}
+    15%{
+    text-shadow: -.05em -.025em 0 rgba(255, 0, 0, 0.75),
+                 .025em .025em 0 rgba(0, 255, 0, 0.75),
+                 -.05em -.05em 0 rgba(0,0,255,.75);
+}
+    49%{
+    text-shadow: -.05em -.025em 0 rgba(255, 0, 0, 0.75),
+                 .025em .025em 0 rgba(0, 255, 0, 0.75),
+                 -.05em -.05em 0 rgba(0,0,255,.75);
+}
+    50%{
+    text-shadow: .025em .05em 0 rgba(255, 0, 0, 0.75),
+                 .05em  0em rgba(0, 255, 0, 0.75),
+                 0em -.05em 0 rgba(0,0,255,.75);
+}
+    99%{
+    text-shadow: .025em .05em 0 rgba(255, 0, 0, 0.75),
+                 .05em  0em rgba(0, 255, 0, 0.75),
+                 0em -.05em 0 rgba(0,0,255,.75);
+}
+    100%{
+    text-shadow: -.025em 0em 0 rgba(255, 0, 0, 0.75),
+                 -.025em -.025em 0 rgba(0, 255, 0, 0.75),
+                 -.025em .05em 0 rgba(0,0,255,.75);
+}
+}
+
+.welcome{
+    font-family:"Fredericka the Great", arial;
+    margin-top: 35%; 
+    text-align: center;
+    color:#0a4d68;
+    font-size: 10%;
+    }
+.welcome:hover{
+    color:rgb(163, 11, 11);
+}
+
+.designer{
+    justify-items: anchor-center;
+}
+
+.nav {
+    margin:5% 5%;
+}
+
+.nav button{
+    text-decoration: none;
+    padding:2px;
+    background-color:transparent;
+    color:#0a4d68;
+    border:none;
+    margin:2px;
+    font-weight: 800;
+    box-shadow: 5px 5px 5px  #069A8E;
+    transition: color 1s, background-color 1s;
+}
+.nav button:hover{
+    color:rgb(28, 5, 83);
+    background-color: #93d5ef;
+}
+.copy{
+    color:#033a4f;
+}
+
+@media (max-width:768) {
+    .nav{
+        justify-items:center;
+    }
+}
+@media(max-width:400px){
+    h2{
+     text-align: right;
+    }
+}
+@media(max-width:768){
+    .background{
+        background-image: url(../images/DanaBeach.JPG);
+    }
+}
